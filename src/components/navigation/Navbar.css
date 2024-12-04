@@ -35,14 +35,29 @@ nav .animation {
   transition: all 0.5s ease 0s;
 }
 
+nav .animatedUnderline {
+  position: absolute;
+  height: 3%;
+  bottom: 0;
+  z-index: 0;
+  background-color: rgb(124, 131, 109);
+  border-radius: 8px;
+  transition: all 0.5s ease 0s;
+}
+
 a:nth-child(1) {
   width: 33.33%;
   /* background-color: yellow; */
 }
 
 a:nth-child(1):hover ~ .animation {
-  width: 100px;
-  left: 25px;
+  width: 21.5%;
+  left: 5.7%;
+}
+
+a:nth-child(1).active ~ .animatedUnderline {
+  width: 21.5%;
+  left: 5.7%;
 }
 
 a:nth-child(2) {
@@ -51,8 +66,13 @@ a:nth-child(2) {
 }
 
 a:nth-child(2):hover ~ .animation {
-  width: 100px;
-  left: 175px;
+  width: 21.5%;
+  left: 39%;
+}
+
+a:nth-child(2).active ~ .animatedUnderline {
+  width: 21.5%;
+  left: 39%;
 }
 
 a:nth-child(3) {
@@ -60,6 +80,11 @@ a:nth-child(3) {
 }
 
 a:nth-child(3):hover ~ .animation {
-  width: 110px;
-  left: 325px;
+  width: 21.5%;
+  left: 72.3%;
+}
+
+a:nth-child(3).active ~ .animatedUnderline {
+  width: 21.5%;
+  left: 72.3%;
 }
