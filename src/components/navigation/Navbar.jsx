@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import { MdRadio, MdQueueMusic, MdFavorite, MdSearch } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar({ className }) {
   return (
@@ -8,19 +9,20 @@ export default function Navbar({ className }) {
         <MdRadio size={50} />
       </div>
       <nav>
-        <a href="">
+        <NavLink to="/">
           <MdFavorite size={30} className="inline" />
-          <span className="2xs:hidden xs:block ">favourite</span>
-        </a>
-        <a href="">
+          <span className="hidden xs:block ">favourite</span>
+        </NavLink>
+        <NavLink to="browse">
           <MdQueueMusic size={30} className="inline" />
-          <span className="2xs:hidden xs:block">Browse</span>
-        </a>
-        <a href="">
+          <span className="hidden xs:block">Browse</span>
+        </NavLink>
+        <NavLink to="searchpage">
           <MdSearch size={30} className="inline" />
-          <span className="2xs:hidden xs:block">Search</span>
-        </a>
+          <span className="hidden xs:block">Search</span>
+        </NavLink>
         <div className="animation "></div>
+        <div className="animatedUnderline"></div>
       </nav>
     </div>
   );
