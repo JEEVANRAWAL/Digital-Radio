@@ -4,7 +4,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import FavoritesPage from "./components/pages/FavoritesPage";
-import BrowsePage from "./components/pages/BrowsePage";
+import BrowsePage, { radioStationFetcher } from "./components/pages/BrowsePage";
 import SearchPage from "./components/pages/SearchPage";
 
 const routes = createBrowserRouter([
@@ -18,6 +18,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "browse",
+        loader: radioStationFetcher,
         element: <BrowsePage />,
       },
       {
